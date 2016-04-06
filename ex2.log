@@ -1,0 +1,333 @@
+vlog -f compile_questa_sv.f
+# QuestaSim vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Compiling package alu_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+/soft/Mentor/Questa_10.2c_5/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling interface alu_if
+# -- Compiling module top
+# -- Compiling module alu8
+# 
+# Top level modules:
+# 	top
+vsim -do "run -all" top
+# vsim -do {run -all} top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.alu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.alu_if(fast)
+# Loading work.alu8(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /soft/Mentor/Questa_10.2c_5/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run -all 
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test ...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------
+# Name                   Type                    Size  Value
+# ----------------------------------------------------------
+# alu_environmet         alu_env                 -     @458 
+#   m_driver             alu_driver              -     @470 
+#     rsp_port           uvm_analysis_port       -     @487 
+#     seq_item_port      uvm_seq_item_pull_port  -     @478 
+#   m_sequencer          alu_sequencer           -     @496 
+#     rsp_export         uvm_analysis_export     -     @504 
+#     seq_item_export    uvm_seq_item_pull_imp   -     @610 
+#     arbitration_queue  array                   0     -    
+#     lock_queue         array                   0     -    
+#     num_last_reqs      integral                32    'd1  
+#     num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------
+# 
+# DUT @ 30 operand_1=xxxxxxxx operand_2=xxxxxxxx op_code=xxxx shift_rotate=xxx result=zzzzzzzz carry = x
+# Following Set of Sequence item will be: operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000
+# 30: Driving Instruction
+# Driver @ 30 operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000
+# DUT @ 50 operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000 result=10100110 carry = 0
+# Following Set of Sequence item will be: operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100
+# 50: Driving Instruction
+# Driver @ 50 operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100
+# DUT @ 70 operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100 result=11111011 carry = 1
+# Following Set of Sequence item will be: operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111
+# 70: Driving Instruction
+# Driver @ 70 operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111
+# DUT @ 90 operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111 result=zzzzzzzz carry = 1
+# Following Set of Sequence item will be: operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011
+# 90: Driving Instruction
+# Driver @ 90 operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011
+# DUT @ 110 operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011 result=01101010 carry = 0
+# Following Set of Sequence item will be: operand_1=00010001 operand_2=11111001 op_code=1101 shift_rotate=001
+# 110: Driving Instruction
+# Driver @ 110 operand_1=00010001 operand_2=11111001 op_code=1101 shift_rotate=001
+# DUT @ 130 operand_1=00010001 operand_2=11111001 op_code=1101 shift_rotate=001 result=zzzzzzzz carry = 0
+# Following Set of Sequence item will be: operand_1=11010111 operand_2=10000001 op_code=0100 shift_rotate=010
+# 130: Driving Instruction
+# Driver @ 130 operand_1=11010111 operand_2=10000001 op_code=0100 shift_rotate=010
+# DUT @ 150 operand_1=11010111 operand_2=10000001 op_code=0100 shift_rotate=010 result=zzzzzzzz carry = 0
+# Following Set of Sequence item will be: operand_1=01001011 operand_2=11010110 op_code=1000 shift_rotate=101
+# 150: Driving Instruction
+# Driver @ 150 operand_1=01001011 operand_2=11010110 op_code=1000 shift_rotate=101
+# DUT @ 170 operand_1=01001011 operand_2=11010110 op_code=1000 shift_rotate=101 result=01100000 carry = 0
+# Following Set of Sequence item will be: operand_1=00110010 operand_2=11000010 op_code=0101 shift_rotate=000
+# 170: Driving Instruction
+# Driver @ 170 operand_1=00110010 operand_2=11000010 op_code=0101 shift_rotate=000
+# DUT @ 190 operand_1=00110010 operand_2=11000010 op_code=0101 shift_rotate=000 result=11110100 carry = 0
+# Following Set of Sequence item will be: operand_1=11110000 operand_2=01010010 op_code=0011 shift_rotate=011
+# 190: Driving Instruction
+# Driver @ 190 operand_1=11110000 operand_2=01010010 op_code=0011 shift_rotate=011
+# DUT @ 210 operand_1=11110000 operand_2=01010010 op_code=0011 shift_rotate=011 result=10100010 carry = 1
+# Following Set of Sequence item will be: operand_1=11001100 operand_2=01110110 op_code=0010 shift_rotate=011
+# 210: Driving Instruction
+# Driver @ 210 operand_1=11001100 operand_2=01110110 op_code=0010 shift_rotate=011
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 210: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    5
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /soft/Mentor/Questa_10.2c_5/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 210 ns  Iteration: 66  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /soft/Mentor/Questa_10.2c_5/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Compile of alu8.v was successful.
+# Compile of alu_driver.sv was successful.
+# Compile of alu_env.sv was successful.
+# Compile of alu_interface.sv was successful.
+# Compile of alu_pkg.sv was successful.
+# Compile of alu_sequence.sv was successful.
+# Compile of alu_sequencer.sv was successful.
+# Compile of top.sv was successful.
+# Compile of transaction_item.sv was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim work.top
+# vsim work.top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.alu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.alu_if(fast)
+# Loading work.alu8(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /soft/Mentor/Questa_10.2c_5/questasim/uvm-1.1d/linux/uvm_dpi.so
+run
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test ...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------
+# Name                   Type                    Size  Value
+# ----------------------------------------------------------
+# alu_environmet         alu_env                 -     @458 
+#   m_driver             alu_driver              -     @470 
+#     rsp_port           uvm_analysis_port       -     @487 
+#     seq_item_port      uvm_seq_item_pull_port  -     @478 
+#   m_sequencer          alu_sequencer           -     @496 
+#     rsp_export         uvm_analysis_export     -     @504 
+#     seq_item_export    uvm_seq_item_pull_imp   -     @610 
+#     arbitration_queue  array                   0     -    
+#     lock_queue         array                   0     -    
+#     num_last_reqs      integral                32    'd1  
+#     num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------
+# 
+# Following Set of Sequence item will be: operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000
+# 0: Driving Instruction
+# Driver @ 0 operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000
+run
+run
+# DUT @ 30 operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000 result=10100110 carry = x
+run
+# Following Set of Sequence item will be: operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100
+# 40: Driving Instruction
+# Driver @ 40 operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100
+run
+# DUT @ 50 operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100 result=11111011 carry = 1
+run
+# Following Set of Sequence item will be: operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111
+# 60: Driving Instruction
+# Driver @ 60 operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111
+run
+# DUT @ 70 operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111 result=zzzzzzzz carry = 1
+run
+# Following Set of Sequence item will be: operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011
+# 80: Driving Instruction
+# Driver @ 80 operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011
+.main clear
+vlib work
+transcript file ex2.log
+vlog -f compile_questa_sv.f
+# QuestaSim vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Compiling package alu_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+/soft/Mentor/Questa_10.2c_5/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling interface alu_if
+# -- Compiling module top
+# -- Compiling module alu8
+# 
+# Top level modules:
+# 	top
+vsim -do "run -all" top
+# vsim -do {run -all} top 
+# ** Warning: (vsim-31) Unable to unlink file "/home/rupbas/Desktop/Sverification/511433-Basnet-Rupesh-ex2/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.alu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.alu_if(fast)
+# Loading work.alu8(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /soft/Mentor/Questa_10.2c_5/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run -all 
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test ...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------
+# Name                   Type                    Size  Value
+# ----------------------------------------------------------
+# alu_environmet         alu_env                 -     @458 
+#   m_driver             alu_driver              -     @470 
+#     rsp_port           uvm_analysis_port       -     @487 
+#     seq_item_port      uvm_seq_item_pull_port  -     @478 
+#   m_sequencer          alu_sequencer           -     @496 
+#     rsp_export         uvm_analysis_export     -     @504 
+#     seq_item_export    uvm_seq_item_pull_imp   -     @610 
+#     arbitration_queue  array                   0     -    
+#     lock_queue         array                   0     -    
+#     num_last_reqs      integral                32    'd1  
+#     num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------
+# 
+# DUT @ 30 operand_1=xxxxxxxx operand_2=xxxxxxxx op_code=xxxx shift_rotate=xxx result=zzzzzzzz carry = x
+# Following Set of Sequence item will be: operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000
+# 30: Driving Instruction
+# Driver @ 30 operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000
+# DUT @ 50 operand_1=01010000 operand_2=11110110 op_code=0011 shift_rotate=000 result=10100110 carry = 0
+# Following Set of Sequence item will be: operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100
+# 50: Driving Instruction
+# Driver @ 50 operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100
+# DUT @ 70 operand_1=10100011 operand_2=01111000 op_code=0010 shift_rotate=100 result=11111011 carry = 1
+# Following Set of Sequence item will be: operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111
+# 70: Driving Instruction
+# Driver @ 70 operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111
+# DUT @ 90 operand_1=01111000 operand_2=01010111 op_code=1101 shift_rotate=111 result=zzzzzzzz carry = 1
+# Following Set of Sequence item will be: operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011
+# 90: Driving Instruction
+# Driver @ 90 operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011
+# DUT @ 110 operand_1=10111110 operand_2=11010100 op_code=0011 shift_rotate=011 result=01101010 carry = 0
+# Following Set of Sequence item will be: operand_1=00010001 operand_2=11111001 op_code=1101 shift_rotate=001
+# 110: Driving Instruction
+# Driver @ 110 operand_1=00010001 operand_2=11111001 op_code=1101 shift_rotate=001
+# DUT @ 130 operand_1=00010001 operand_2=11111001 op_code=1101 shift_rotate=001 result=zzzzzzzz carry = 0
+# Following Set of Sequence item will be: operand_1=11010111 operand_2=10000001 op_code=0100 shift_rotate=010
+# 130: Driving Instruction
+# Driver @ 130 operand_1=11010111 operand_2=10000001 op_code=0100 shift_rotate=010
+# DUT @ 150 operand_1=11010111 operand_2=10000001 op_code=0100 shift_rotate=010 result=zzzzzzzz carry = 0
+# Following Set of Sequence item will be: operand_1=01001011 operand_2=11010110 op_code=1000 shift_rotate=101
+# 150: Driving Instruction
+# Driver @ 150 operand_1=01001011 operand_2=11010110 op_code=1000 shift_rotate=101
+# DUT @ 170 operand_1=01001011 operand_2=11010110 op_code=1000 shift_rotate=101 result=01100000 carry = 0
+# Following Set of Sequence item will be: operand_1=00110010 operand_2=11000010 op_code=0101 shift_rotate=000
+# 170: Driving Instruction
+# Driver @ 170 operand_1=00110010 operand_2=11000010 op_code=0101 shift_rotate=000
+# DUT @ 190 operand_1=00110010 operand_2=11000010 op_code=0101 shift_rotate=000 result=11110100 carry = 0
+# Following Set of Sequence item will be: operand_1=11110000 operand_2=01010010 op_code=0011 shift_rotate=011
+# 190: Driving Instruction
+# Driver @ 190 operand_1=11110000 operand_2=01010010 op_code=0011 shift_rotate=011
+# DUT @ 210 operand_1=11110000 operand_2=01010010 op_code=0011 shift_rotate=011 result=10100010 carry = 1
+# Following Set of Sequence item will be: operand_1=11001100 operand_2=01110110 op_code=0010 shift_rotate=011
+# 210: Driving Instruction
+# Driver @ 210 operand_1=11001100 operand_2=01110110 op_code=0010 shift_rotate=011
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 210: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    5
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /soft/Mentor/Questa_10.2c_5/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 210 ns  Iteration: 66  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /soft/Mentor/Questa_10.2c_5/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+quit -sim
+transcript file ""
